@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gq3-gT-cGV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View Controller-->
+        <scene sceneID="gkt-Zk-VtM">
+            <objects>
+                <viewController id="Gq3-gT-cGV" customClass="PhotosViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05D-Tx-Sfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-YR-5Gy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotosTableViewCell" rowHeight="463" id="d9Y-Ud-cJT" customClass="PhotosTableViewCell" customModule="Tumblr" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="463"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d9Y-Ud-cJT" id="5Bx-dL-aDb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-Fm-Trv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="400" id="QPv-pP-nHu"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="uNV-Fm-Trv" secondAttribute="trailing" id="Gh5-kV-2Gz"/>
+                                                <constraint firstItem="uNV-Fm-Trv" firstAttribute="leading" secondItem="5Bx-dL-aDb" secondAttribute="leading" id="MQS-n8-hjv"/>
+                                                <constraint firstAttribute="bottom" secondItem="uNV-Fm-Trv" secondAttribute="bottom" id="cVw-Bh-Yat"/>
+                                                <constraint firstItem="uNV-Fm-Trv" firstAttribute="top" secondItem="5Bx-dL-aDb" secondAttribute="top" id="iBe-2i-ppJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImage" destination="uNV-Fm-Trv" id="J2e-Dg-oYQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ypc-YR-5Gy" firstAttribute="leading" secondItem="n42-7g-atY" secondAttribute="leading" id="1TO-iQ-Bjl"/>
+                            <constraint firstItem="n42-7g-atY" firstAttribute="bottom" secondItem="Ypc-YR-5Gy" secondAttribute="bottom" id="EI7-hH-l2H"/>
+                            <constraint firstItem="Ypc-YR-5Gy" firstAttribute="top" secondItem="n42-7g-atY" secondAttribute="top" id="ojJ-eP-33X"/>
+                            <constraint firstItem="n42-7g-atY" firstAttribute="trailing" secondItem="Ypc-YR-5Gy" secondAttribute="trailing" id="xVc-XZ-wz8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n42-7g-atY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Ph-1g-uzV"/>
+                    <connections>
+                        <outlet property="photoTableView" destination="Ypc-YR-5Gy" id="mjb-zh-zXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwN-pe-8vP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+</document>
